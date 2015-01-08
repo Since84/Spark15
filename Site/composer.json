@@ -1,0 +1,46 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress/core",
+                "type": "webroot",
+                "version": "4.0",
+                "dist": {
+                    "url": "http://wordpress.org/wordpress-4.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery-ui/stable",
+                "version": "1.11.0",
+                "dist": {
+                    "url": "http://jqueryui.com/resources/download/jquery-ui-1.11.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "fancyguy/webroot-installer": "1.0.0",
+        "wordpress/core": "4.0",
+        "wpackagist-plugin/timber-library": "0.20.*",
+        "wpackagist-plugin/seo-ultimate": "7.6.5.*",
+        "wpackagist-plugin/w3-total-cache": "0.9.*",
+        "wpackagist-plugin/advanced-custom-fields": "4.3.*",
+        "wpackagist-plugin/social-media-icons-widget": "14.*",
+        "wpackagist-plugin/w3-total-cache": "0.9.*",
+        "jquery-ui/stable": "1.11.*"
+    },
+    "extra": {
+      "webroot-dir": "wp",
+      "webroot-package": "wordpress/core"
+    }
+}

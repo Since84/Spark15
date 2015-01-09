@@ -1,3 +1,4 @@
 [submodule "Site/wp-content/themes/R4G"]
 	path = Site/wp-content/themes/R4G
 	url = git@github.com:Since84/R4G-Elefint.git
+	ignore = 

@@ -1,0 +1,77 @@
+/* Rights For Girls Typography Variables and Mixins */ 
+@mixin header {
+	font-family: "Franklin Gothic URW Comp";
+	font-weight: 700; //Demi
+	text-transform: uppercase;
+}
+
+@mixin h1 {
+	@include header;
+	font-weight: 700; //Demi
+	font-size: 80px; //60pt
+} 
+
+@mixin h2 {
+	@include header;
+	font-weight: 400; //Book
+	font-size: 72px; //54pt
+}
+
+@mixin h3 {
+	@include header;
+	font-weight: 400; //Book
+	font-size: 53.33px; //40pt
+}
+
+@mixin h4 {
+	@include header;
+	font-weight: 700; //Demi
+	font-size: 50.67px; //38pt
+}
+
+@mixin h5 {
+	@include header;
+	font-weight: 700; //Demi
+	font-size: 50.67px; //38pt
+}
+
+@mixin h6 {
+	@include header;
+	font-weight: 700; //Demi
+	font-size: 32px; //24pt
+}
+
+@mixin h7 {
+	@include header;
+	font-family: "Franklin Gothic URW";
+	font-weight: 400; //Book
+	font-size: 21.33px; //16pt
+}
+
+@mixin sub-nav {
+	@include h7;
+	font-style: italic;
+}
+
+@mixin short-body {
+	font-family: "Franklin Gothic URW Cond";
+	font-weight: 400;
+	font-size: 26.67px;//20pt
+}
+
+@mixin long-body {
+	@include short-body;
+	font-size: 24px; //18pt
+}
+
+@mixin call-to-action {
+	font-family: "Franklin Gothic URW Comp";
+	font-weight: 700; //Demi
+	font-size: 24px; //18pt
+}
+
+@mixin mission-statement {
+	@include short-body;
+	color: $purple3;
+	font-size: 42.67px; //32pt
+}

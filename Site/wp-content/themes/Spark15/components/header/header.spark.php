@@ -14,11 +14,16 @@ class Header_Header {
 		,'template'		=>	null //Name of header template
 		,'isJs'			=> 	false
 		,'isMobile'		=>  true
+		,'context'		=> 	false
 	);	
 
 	function __construct($options) {
 		// Set Options
-		self::$spark_options = ( $options ? $options : self::$spark_options );
+		self::$spark_options = ( 
+			$options 
+			? array_merge( self::$spark_options , $options ) 
+			: self::$spark_options 
+		);
 
 		//Add Actions
 		add_action('init', array($this, 'initAction'));
@@ -67,7 +72,7 @@ class Header_Header {
 		} else {
 		  $context        					= Timber::get_context();
 		  $context['nav']  					= new TimberMenu( self::$spark_options['nav'] );
-		  $context[''.$class_id.'_right']	= Timber::get_sidebar( self::$spark_options['headerRight'] );
+		  $context[''.self::$class_id.'_right']	= Timber::get_sidebar( self::$spark_options['headerRight'] );
 		  $context['logo']					= get_header_image();
 		}
 
@@ -79,7 +84,7 @@ class Header_Header {
 	**/
 	public static function getView(){
 		return Timber::compile( 
-			'/classes/components/header/views/' 
+			'/components/header/views/' 
 			. self::$spark_options['template']
 			.'.html.twig', 
 			self::getContext() );

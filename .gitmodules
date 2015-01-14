@@ -1,3 +1,9 @@
 [submodule "Site/wp-content/themes/R4G"]
 	path = Site/wp-content/themes/R4G
 	url = https://Since84@github.com/Since84/R4G-Elefint.git
+[submodule "Site/wp-content/themes/AG"]
+	path = Site/wp-content/themes/AG
+	url = https://Since84@github.com/Since84/AG
+[submodule "Site/wp-content/themes/Spark15/style/spark/gumby"]
+	path = Site/wp-content/themes/Spark15/style/spark/gumby
+	url = http://github.com/GumbyFramework/Gumby.git

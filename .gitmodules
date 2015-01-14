@@ -1,6 +1,8 @@
 [submodule "Site/wp-content/themes/R4G"]
 	path = Site/wp-content/themes/R4G
 	url = https://Since84@github.com/Since84/R4G-Elefint.git
+	fetchRecurseSubmodules = true
+	ignore = all
 [submodule "Site/wp-content/themes/AG"]
 	path = Site/wp-content/themes/AG
 	url = https://Since84@github.com/Since84/AG

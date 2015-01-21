@@ -16,4 +16,6 @@
 
 	spl_autoload_register('__autoload');
 
+	$sparkTheme = new Theme_Theme();
+
 ?>

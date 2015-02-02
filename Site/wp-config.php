@@ -18,7 +18,7 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  *
  * @package WordPress
  */	
-if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls') !== false) { 2
+if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) { 2
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
@@ -29,6 +29,18 @@ if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls') !== false) { 2
 
 	/** MySQL database password */
 	define('DB_PASSWORD', 'galaxy1');
+
+} else if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.elefint.com') !== false) { 2
+
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'elefint_r4g');
+
+	/** MySQL database username */
+	define('DB_USER', 'elefint_damon');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'elefint_damon');
 
 }
 

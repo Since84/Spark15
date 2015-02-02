@@ -34,7 +34,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) {
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME', 'elefint_r4g');
+	define('DB_NAME', 'elefin5_r4g');
 
 	/** MySQL database username */
 	define('DB_USER', 'elefint_damon');

@@ -18,7 +18,7 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  *
  * @package WordPress
  */	
-if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) { 2
+if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) { 
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */

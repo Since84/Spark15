@@ -40,7 +40,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) {
 	define('DB_USER', 'elefin5_damon');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', 'elefint_damon');
+	define('DB_PASSWORD', 'damon3lefint');
 
 }
 

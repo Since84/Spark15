@@ -30,7 +30,7 @@ if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.dev') !== false) {
 	/** MySQL database password */
 	define('DB_PASSWORD', 'galaxy1');
 
-} else if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.elefint.com') !== false) { 2
+} else if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls.elefint.com') !== false) {
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */

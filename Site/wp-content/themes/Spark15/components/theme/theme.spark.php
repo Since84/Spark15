@@ -15,7 +15,7 @@ class Theme_Theme {
 		// Register Post Types ( custom, nav, sidebars, etc.)
 		require_once(get_template_directory().'/include/enqueue.php');
 		// require_once(get_template_directory().'/functions/nav.php');
-		// require_once(get_template_directory().'/functions/sidebars.php');
+		require_once(get_template_directory().'/functions/sidebars.php');
 		// require_once(get_template_directory().'/functions/post_types.php');
 		// require_once(get_template_directory().'/functions/hooks_filters.php');
 		// require_once(get_template_directory().'/functions/post_styles.php');

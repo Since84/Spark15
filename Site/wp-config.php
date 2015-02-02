@@ -17,17 +17,20 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  * to "wp-config.php" and fill in the values.
  *
  * @package WordPress
- */
+ */	
+if (strpos($_SERVER['HTTP_HOST'], 'rightsforgirls') !== false) { 2
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'info');
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'r4g');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+	/** MySQL database username */
+	define('DB_USER', 'root');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'galaxy1');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'galaxy1');
+
+}
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

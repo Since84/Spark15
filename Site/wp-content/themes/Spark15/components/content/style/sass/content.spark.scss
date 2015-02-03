@@ -1,0 +1,16 @@
+/*
+	Form 1.0 - Spark
+	Styles for Spark Header Component. 
+	Uses Gumby CSS Framework ( http://gumbyframework.com/ )
+*/
+
+$row-max-width: 1140px !default; // The max-width of your project
+$gutter-in-px: 20px !default; // This is the space between columns
+$cols: 12 !default; // The number of columns in your grid
+$hybrid: 16 !default; // Change this if you plan to mix grids
+
+@import "../../../../../style/sass/gumby/gumby";
+
+.spark-form{
+	
+}

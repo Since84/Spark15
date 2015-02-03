@@ -16,7 +16,7 @@ class Header_Header {
 		,'isMobile'		=>  true
 		,'context'		=> 	false
 	);	
-
+  
 	function __construct($options) {
 		// Set Options
 		self::$spark_options = ( 
@@ -72,7 +72,7 @@ class Header_Header {
 		} else {
 		  $context        					= Timber::get_context();
 		  $context['nav']  					= new TimberMenu( self::$spark_options['nav'] );
-		  $context[''.self::$class_id.'_right']	= Timber::get_sidebar( self::$spark_options['headerRight'] );
+		  $context[''.self::$class_id.'_right']	= Timber::compile(self::$spark_options['headerRight']);
 		  $context['logo']					= get_header_image();
 		}
 

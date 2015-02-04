@@ -6,10 +6,10 @@ class Theme_Theme {
 		//Add Actions
 		add_action('init', array($this, 'initAction'));
 		$this->createAdminPage(array(
-			'page_name' 	=> 'Footer'
-			,'menu_title' 	=> 'footer'
+			'page_name' 	=> 'Global'
+			,'menu_title' 	=> 'Global'
 			,'capability' 	=> 'edit_pages'
-			,'menu_slug'	=> 'footer_admin'
+			,'menu_slug'	=> 'global_admin'
 		));
 	}
 

@@ -5,3 +5,6 @@
 [submodule "Site/wp-content/themes/infograph15"]
 	path = Site/wp-content/themes/infograph15
 	url = https://Since84@github.com/Since84/infograph.git
+[submodule "Site/wp-content/themes/Rights15"]
+	path = Site/wp-content/themes/Rights15
+	url = https://github.com/Since84/R4G-Elefint.git

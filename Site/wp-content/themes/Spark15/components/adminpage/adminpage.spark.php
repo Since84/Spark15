@@ -41,40 +41,7 @@
 				,'Footer Header'
 				,array( $this, 'sectionInfo' ) 
 				,$this->options['menu_slug'] 
-			);
-
-			$footerFields = [
-				array(
-	            	'name'	=> 'Footer Heading'
-	            	,'id'	=> 'footer_heading'
-				)
-				,array(
-	            	'name'	=> 'Footer Sub Heading'
-	            	,'id'	=> 'footer_sub_heading'
-				)
-			];	        
-
-			foreach( $footerFields as $field )
-			{
-
-		        register_setting(
-		            'footer_content' // Option group
-		            ,$field['id'] // Option name
-		            ,array( $this, 'sanitizeEditor' ) // Sanitize
-		        );  
-
-				add_settings_field(
-		            $field['id'] // Option group
-		            ,$field['name'] // Option name
-		            ,array( $this, 'textField' ) // Sanitize
-		            ,$this->options['menu_slug']
-		            ,'footer_content'
-		            ,array(
-		            	'id'	=> $field['id']
-		            )
-		        ); 	
-
-			}
+			);       
 
 			/// Social Meta Section
 			add_settings_section( 
@@ -84,43 +51,6 @@
 				,$this->options['menu_slug'] 
 			);
 
-			$petitionFields = [
-				array(
-					'id'	=> 'petition_link'
-					,'name'	=> 'Link'
-				)
-				,array(
-					'id'	=> 'petition_text'
-					,'name'	=> 'Summary'
-				)
-				,array(
-					'id'	=> 'petition_heading'
-					,'name'	=> 'Heading'
-				)
-			];
-
-			foreach( $petitionFields as $field )
-			{
-
-		        register_setting(
-		            'petition_content' // Option group
-		            ,$field['id'] // Option name
-		            ,array( $this, 'sanitizeEditor' ) // Sanitize
-		        );  
-
-				add_settings_field(
-		            $field['id'] // Option group
-		            ,$field['name'] // Option name
-		            ,array( $this, 'textField' ) // Sanitize
-		            ,$this->options['menu_slug']
-		            ,'petition_content'
-		            ,array(
-		            	'id'	=> $field['id']
-		            )
-		        ); 	
-
-			}			
-
 			/// Social Meta Section
 			add_settings_section( 
 				'social_content' 
@@ -129,41 +59,65 @@
 				,$this->options['menu_slug'] 
 			);
 
-			$socialFields = [
+			$fields = [
 				array(
+	            	'name'	=> 'Heading'
+	            	,'id'	=> 'footer_heading'
+					,'section'	=> 'footer_content'
+				)
+				,array(
+	            	'name'	=> 'Sub Heading'
+	            	,'id'	=> 'footer_sub_heading'
+					,'section'	=> 'footer_content'
+				)
+				,array(
+					'id'	=> 'petition_link'
+					,'name'	=> 'Link'
+					,'section'	=> 'petition_content'
+				)
+				,array(
+					'id'	=> 'petition_text'
+					,'name'	=> 'Summary'
+					,'section'	=> 'petition_content'
+				)
+				,array(
+					'id'	=> 'petition_heading'
+					,'name'	=> 'Heading'
+					,'section'	=> 'petition_content'
+				)
+				,array(
 					'id'	=> 'twitter_link'
 					,'name'	=> 'Twitter'
+					,'section'	=> 'social_content'
 				)
 				,array(
 					'id'	=> 'facebook_link'
 					,'name'	=> 'Facebook'
+					,'section'	=> 'social_content'
 				)
 			];
 
-			foreach( $socialFields as $field )
+			foreach( $fields as $field )
 			{
-
-		        register_setting(
-		            'social_content' // Option group
-		            ,$field['id'] // Option name
-		            ,array( $this, 'sanitizeEditor' ) // Sanitize
-		        );  
 
 				add_settings_field(
 		            $field['id'] // Option group
 		            ,$field['name'] // Option name
 		            ,array( $this, 'textField' ) // Sanitize
 		            ,$this->options['menu_slug']
-		            ,'social_content'
+		            ,$field['section']
 		            ,array(
 		            	'id'	=> $field['id']
 		            )
 		        ); 	
 
-			}
-			//Footer Heading
-	
+		        register_setting(
+		            'global_content' // Option group
+		            ,$field['id'] // Option name
+		            ,array( $this, 'sanitizeEditor' ) // Sanitize
+		        );  
 
+			}			
 		}
 
 		/** FUNCTION createAdminPage
@@ -176,10 +130,11 @@
 	            <form method="post" action="options.php">
 	            <?php
 	                // This prints out all hidden setting fields
-	                settings_fields( 'footer_content' );
-	                settings_fields( 'petition_content' );
-	                settings_fields( 'social_content' );   
 	                do_settings_sections( $this->options['menu_slug'] );
+	                settings_fields( 'global_content' );
+	                // settings_fields( 'petition_content' );
+	                // settings_fields( 'social_content' );   
+	                
 	                submit_button();
 	            ?>
 	            </form>
@@ -199,20 +154,10 @@
 		**/
 		function textField($args){	
 			$option = get_option($args['id']);
-			var_dump($args);
 ?>			
 					<input type="text" name="<?= $args['id']; ?>" value="<?php echo esc_attr( $option ); ?>" />
 <?php
 		}
-		function subHeadingTextField() {
-			$footerSubHeading = get_option('footer_sub_heading');	
-			var_dump($footerSubHeading);		
-?>
-				<tr>	
-					<td><input type="text" name="footer_sub_heading" value="<?php echo esc_attr( $footerSubHeading ); ?>" /></td>
-				</tr>
-<?php
-		}	
 
 		/** FUNCTION sanitizeEditor
 		  * applies actions to be run at admin init

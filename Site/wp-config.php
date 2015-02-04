@@ -19,7 +19,7 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  * @package WordPress
  */	
 
-if ( strpos($_SERVER['HTTP_HOST'], '.dev') !== false ) { 
+if ( strpos($_SERVER['HTTP_HOST'], '.dev') !== false || strpos($_SERVER['HTTP_HOST'], '.elefint') !== false  ) { 
  
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */

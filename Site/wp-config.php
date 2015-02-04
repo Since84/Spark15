@@ -2,6 +2,8 @@
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
 
+
+
 /**
  * The base configurations of the WordPress.
  *
@@ -15,17 +17,34 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  * to "wp-config.php" and fill in the values.
  *
  * @package WordPress
- */
+ */	
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'r4g');
+if ( strpos($_SERVER['HTTP_HOST'], '.dev') !== false ) { 
+ 
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'r4g');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+	/** MySQL database username */
+	define('DB_USER', 'root');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'galaxy1');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'galaxy1');
+
+} elseif ( strpos($_SERVER['HTTP_HOST'], '.elefintdesigns.com') !== false) {
+
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+
+	define('DB_NAME', 'elefin5_r4g');
+
+	/** MySQL database username */
+	define('DB_USER', 'elefin5_damon');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'Boom2015'); 
+
+}
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -63,9 +82,6 @@ define('NONCE_SALT',       '&:$|$binoFCBQ{EhXVaO7_*TJOox~t!U_,=LNFYIe}+#K38*G)/O
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 define( 'WP_CONTENT_URL', '/wp-content' );
 
-/** FS METHOD **/
-define( 'FS_METHOD', 'direct' );
-
 /**
  * WordPress Database Table prefix.
  *
@@ -81,7 +97,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 

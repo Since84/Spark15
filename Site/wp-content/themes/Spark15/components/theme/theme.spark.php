@@ -5,7 +5,12 @@ class Theme_Theme {
 
 		//Add Actions
 		add_action('init', array($this, 'initAction'));
-		// $this->createAdminPage();
+		$this->createAdminPage(array(
+			'page_name' 	=> 'Footer'
+			,'menu_title' 	=> 'footer'
+			,'capability' 	=> 'edit_pages'
+			,'menu_slug'	=> 'footer_admin'
+		));
 	}
 
 	/** FUNCTION initAction
@@ -23,7 +28,7 @@ class Theme_Theme {
 		// Theme Support
 		add_theme_support( 'custom-header' );
 		// add_theme_support( 'post-formats', array( 'image', 'gallery' ) );
-		// add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails' );
 
 		// add_post_type_support( 'post', 'post-formats' );
 		// add_post_type_support( 'page', 'post-formats' );
@@ -38,8 +43,8 @@ class Theme_Theme {
 	/** FUNCTION adminMenuAction
 	  * applies actions to be run at admin init
 	**/
-	function createAdminPage(){
-		// $sparkAdmin = new SparkAdminPage();
+	function createAdminPage($options){
+		$sparkAdmin = new Adminpage_Adminpage($options);
 	}
 
 	/** FUNCTION sparkCreateHomePageAdminMenu
@@ -86,6 +91,7 @@ class Theme_Theme {
 	**/
 	static function processPosts($posts) {
 		foreach( $posts as $key => $post ) {
+			$posts[$key]->post_meta = get_post_meta($post->ID);
 			$posts[$key]->post_date 	= get_the_date( "m.d.Y", $post->ID );
 			$posts[$key]->post_subtitle = get_post_meta( $post->ID, 'subtitle', true );
 			$posts[$key]->post_content 	= apply_filters('the_content', $posts[$key]->post_content);

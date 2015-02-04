@@ -105,6 +105,19 @@
 				$newContext );
 		}
 
+		/** FUNCTION processPosts
+		  * processes data from posts into viewable content
+		  * RETURN posts object
+		**/
+		static function processPosts($posts) {
+			foreach( $posts as $key => $post ) {
+				
+				$posts[$key]->post_date 	= get_the_date( "m.d.Y", $post->ID );
+				$posts[$key]->post_subtitle = get_post_meta( $post->ID, 'subtitle', true );
+				$posts[$key]->post_content 	= apply_filters('the_content', $posts[$key]->post_content);
+			}
+		}	
+
 	}
 
 

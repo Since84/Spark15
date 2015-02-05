@@ -1,3 +1,11 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
 # BEGIN W3TC Browser Cache
 <IfModule mod_deflate.c>
     <IfModule mod_headers.c>
@@ -10,6 +18,3 @@
     </IfModule>
 </IfModule>
 # END W3TC Browser Cache
-# BEGIN WordPress
-
-# END WordPress

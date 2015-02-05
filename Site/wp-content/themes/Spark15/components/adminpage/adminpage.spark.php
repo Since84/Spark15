@@ -94,6 +94,11 @@
 					'id'	=> 'facebook_link'
 					,'name'	=> 'Facebook'
 					,'section'	=> 'social_content'
+				)				
+				,array(
+					'id'	=> 'email_link'
+					,'name'	=> 'Contact Email'
+					,'section'	=> 'social_content'
 				)
 			];
 

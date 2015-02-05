@@ -57,101 +57,6 @@
         "installation-source": "dist"
     },
     {
-        "name": "composer/installers",
-        "version": "v1.0.19",
-        "version_normalized": "1.0.19.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/composer/installers.git",
-            "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
-            "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
-            "shasum": ""
-        },
-        "replace": {
-            "roundcube/plugin-installer": "*",
-            "shama/baton": "*"
-        },
-        "require-dev": {
-            "composer/composer": "1.0.*@dev",
-            "phpunit/phpunit": "4.1.*"
-        },
-        "time": "2014-11-29 01:29:17",
-        "type": "composer-installer",
-        "extra": {
-            "class": "Composer\\Installers\\Installer",
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Composer\\Installers\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Kyle Robinson Young",
-                "email": "kyle@dontkry.com",
-                "homepage": "https://github.com/shama"
-            }
-        ],
-        "description": "A multi-framework Composer library installer",
-        "homepage": "http://composer.github.com/installers/",
-        "keywords": [
-            "Craft",
-            "Dolibarr",
-            "Hurad",
-            "MODX Evo",
-            "OXID",
-            "Thelia",
-            "WolfCMS",
-            "agl",
-            "annotatecms",
-            "bitrix",
-            "cakephp",
-            "chef",
-            "codeigniter",
-            "concrete5",
-            "croogo",
-            "dokuwiki",
-            "drupal",
-            "elgg",
-            "fuelphp",
-            "grav",
-            "installer",
-            "joomla",
-            "kohana",
-            "laravel",
-            "lithium",
-            "magento",
-            "mako",
-            "mediawiki",
-            "modulework",
-            "moodle",
-            "phpbb",
-            "piwik",
-            "ppi",
-            "puppet",
-            "roundcube",
-            "shopware",
-            "silverstripe",
-            "symfony",
-            "typo3",
-            "wordpress",
-            "zend",
-            "zikula"
-        ]
-    },
-    {
         "name": "jquery-ui/stable",
         "version": "1.11.0",
         "version_normalized": "1.11.0.0",
@@ -317,5 +222,123 @@
         "type": "wordpress-plugin",
         "installation-source": "dist",
         "homepage": "https://wordpress.org/plugins/typekit-fonts-for-wordpress/"
+    },
+    {
+        "name": "composer/installers",
+        "version": "v1.0.20",
+        "version_normalized": "1.0.20.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/composer/installers.git",
+            "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+            "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+            "shasum": ""
+        },
+        "replace": {
+            "roundcube/plugin-installer": "*",
+            "shama/baton": "*"
+        },
+        "require-dev": {
+            "composer/composer": "1.0.*@dev",
+            "phpunit/phpunit": "4.1.*"
+        },
+        "time": "2015-01-11 03:51:11",
+        "type": "composer-installer",
+        "extra": {
+            "class": "Composer\\Installers\\Installer",
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Composer\\Installers\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama"
+            }
+        ],
+        "description": "A multi-framework Composer library installer",
+        "homepage": "http://composer.github.com/installers/",
+        "keywords": [
+            "Craft",
+            "Dolibarr",
+            "Hurad",
+            "MODX Evo",
+            "OXID",
+            "SMF",
+            "Thelia",
+            "WolfCMS",
+            "agl",
+            "annotatecms",
+            "bitrix",
+            "cakephp",
+            "chef",
+            "codeigniter",
+            "concrete5",
+            "croogo",
+            "dokuwiki",
+            "drupal",
+            "elgg",
+            "fuelphp",
+            "grav",
+            "installer",
+            "joomla",
+            "kohana",
+            "laravel",
+            "lithium",
+            "magento",
+            "mako",
+            "mediawiki",
+            "modulework",
+            "moodle",
+            "phpbb",
+            "piwik",
+            "ppi",
+            "puppet",
+            "roundcube",
+            "shopware",
+            "silverstripe",
+            "symfony",
+            "typo3",
+            "wordpress",
+            "zend",
+            "zikula"
+        ]
+    },
+    {
+        "name": "wpackagist-plugin/display-latest-tweets",
+        "version": "1.2",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "svn",
+            "url": "http://plugins.svn.wordpress.org/display-latest-tweets/",
+            "reference": "trunk"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "http://downloads.wordpress.org/plugin/display-latest-tweets.zip",
+            "reference": null,
+            "shasum": null
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/display-latest-tweets/"
     }
 ]

@@ -1,0 +1,65 @@
+# Copyright (C) 2015 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/display-latest-tweets\n"
+"POT-Creation-Date: 2015-01-02 05:10:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: tweets.php:42
+msgid "A widget that displays your latest tweets."
+msgstr ""
+
+#: tweets.php:160
+msgid "%s ago"
+msgstr ""
+
+#: tweets.php:162
+msgid "Y/m/d"
+msgstr ""
+
+#: tweets.php:164
+msgid "%s"
+msgstr ""
+
+#: tweets.php:164
+msgid "Y/m/d H:i:s"
+msgstr ""
+
+#: tweets.php:227
+msgid "Title:"
+msgstr ""
+
+#: tweets.php:233
+msgid "Twitter Username e.g. username"
+msgstr ""
+
+#: tweets.php:239
+msgid "Number of tweets (max 20)"
+msgstr ""
+
+#: tweets.php:245
+msgid "Follow Text e.g. Follow me on Twitter"
+msgstr ""
+
+#: tweets.php:251
+msgid "Api Key"
+msgstr ""
+
+#: tweets.php:258
+msgid "Api Secret"
+msgstr ""
+
+#: tweets.php:264
+msgid "Access Token"
+msgstr ""
+
+#: tweets.php:270
+msgid "Access Token Secret"
+msgstr ""

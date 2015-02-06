@@ -22,3 +22,15 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+
+<?php
+
+	//Get Site Header : uses SparkHeader Class
+	$sparkHeader 	= new Header_Header(array(
+	  'showLogo'      =>  true
+	  ,'headerRight'  =>  'sidebars/social.php' //Template for right side ( /views/components/... )
+	  ,'nav'          =>  'main-nav' //Menu name for nav menu
+	  ,'template'     =>  'header' //Name of header template
+	  ,'isJs'         =>  false
+	));	
+	echo $sparkHeader::getView();

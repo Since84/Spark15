@@ -40,6 +40,7 @@
         "wpackagist-plugin/typekit-fonts-for-wordpress": "1.*",
         "wpackagist-plugin/font-awesome": "3.2.*",
         "wpackagist-plugin/display-latest-tweets": "1.*",
+        "wpackagist-plugin/contact-form-7": "4.*",
         "jquery-ui/stable": "1.11.*"
     },
     "extra": {

@@ -1,0 +1,274 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/screen.scss */
+#dFolio {
+  display: block;
+  width: 800px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  /* Demo */
+  margin: auto;
+  margin-top: 20px;
+}
+/* line 20, ../sass/screen.scss */
+#dFolio .dBio {
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+  -webkit-transition: max-height .8s;
+  transition: max-height .8s;
+}
+/* line 27, ../sass/screen.scss */
+#dFolio .dBio.open {
+  display: block;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+}
+/* line 35, ../sass/screen.scss */
+#dFolio .dBio.team {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+/* line 40, ../sass/screen.scss */
+#dFolio .dBio.projects {
+  position: relative;
+  max-height: 0;
+  width: 100%;
+  display: block;
+}
+/* line 45, ../sass/screen.scss */
+#dFolio .dBio.projects .column {
+  padding: 0;
+}
+/* line 51, ../sass/screen.scss */
+#dFolio .dGallery {
+  white-space: normal;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 60, ../sass/screen.scss */
+#dFolio .dContainer {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  -moz-transform: perspective(800px) rotateY(0);
+  -webkit-transform: perspective(800px) rotateY(0);
+  transform: perspective(800px) rotateY(0);
+}
+/* line 78, ../sass/screen.scss */
+#dFolio .dContainer .dCard div {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .75s ease-in-out;
+  -moz-transition: .75s ease-in-out;
+  transition: .75s ease-in-out;
+}
+/* line 85, ../sass/screen.scss */
+#dFolio .dContainer .dCard div.back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: perspective(800px) rotateY(180deg);
+  -webkit-transform: perspective(800px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+}
+/* line 97, ../sass/screen.scss */
+#dFolio .dContainer .dCard div.back .dMember-info {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px 6%;
+  top: 0;
+  left: 0;
+}
+/* line 109, ../sass/screen.scss */
+#dFolio .dContainer .dCard div.front {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transform: perspective(800px) rotateY(0deg);
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+}
+/* line 117, ../sass/screen.scss */
+#dFolio .dContainer .dCard div img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 126, ../sass/screen.scss */
+#dFolio .dContainer .dCard:hover .front {
+  -webkit-transform: perspective(800px) rotateY(-179.9deg);
+  -moz-transform: perspective(800px) rotateY(-179.9deg);
+  transform: perspective(800px) rotateY(-179.9deg);
+}
+/* line 131, ../sass/screen.scss */
+#dFolio .dContainer .dCard:hover .back {
+  -moz-transform: perspective(800px) rotateY(0);
+  -webkit-transform: perspective(800px) rotateY(0);
+  transform: perspective(800px) rotateY(0);
+}
+
+/* line 172, ../sass/screen.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 176, ../sass/screen.scss */
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile */
+@media only screen and (max-width: 720px) {
+  /* line 183, ../sass/screen.scss */
+  .page-template-portfolio-php #dFolio .dBio.projects {
+    position: absolute;
+    -webkit-transition: none;
+    transition: none;
+  }
+  /* line 188, ../sass/screen.scss */
+  .page-template-portfolio-php #dFolio .dBio.projects .feature-wide {
+    width: 100%;
+    border: none;
+  }
+  /* line 192, ../sass/screen.scss */
+  .page-template-portfolio-php #dFolio .dBio.projects .feature-side {
+    width: 100%;
+  }
+  /* line 195, ../sass/screen.scss */
+  .page-template-portfolio-php #dFolio .dBio.projects.open {
+    max-height: 1000px;
+  }
+  /* line 199, ../sass/screen.scss */
+  .page-template-portfolio-php #dFolio .dBio.projects .close {
+    z-index: 200;
+  }
+}
+/**** Isotope CSS3 transitions ****/
+/* line 207, ../sass/screen.scss */
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 216, ../sass/screen.scss */
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 224, ../sass/screen.scss */
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 234, ../sass/screen.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}

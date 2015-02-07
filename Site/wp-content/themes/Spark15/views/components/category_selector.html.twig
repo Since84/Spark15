@@ -1,0 +1,5 @@
+<ul class="cat-list">
+    {% for cat in categories %}
+        <li><a href="{{ cat.link }}">{{cat.name}}</a></li>
+    {% endfor %}
+</ul>

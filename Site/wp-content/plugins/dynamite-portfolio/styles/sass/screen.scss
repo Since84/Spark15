@@ -1,0 +1,67 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+#dFolio {
+	width: 100%;
+	height: auto;
+	display: block;
+
+	.dBio {
+		background: #eee;
+	}
+
+	.dMember {
+		&.inactive { opacity: .2; }
+		&:hover { opacity: 1; }
+		.dCard {
+			h1 {
+				color: white;
+			}
+			p {
+				color: red;
+			}
+			.dMember-info {
+				z-index: 3;
+				display: block;
+				position: relative;
+				box-sizing: border-box;
+				width: 100%;
+				height: 100%;
+				padding: 6%;
+				background: rgba( 10, 10, 10, .9 );
+				
+				h1 { 
+					margin-bottom: 5px; 
+					font-weight: normal;
+				}
+			}	
+		}
+
+	}
+
+
+
+	.dMember-thumb {
+		width: 200px;
+		height: auto;
+	}
+	.dMember-profile {
+		display: none;
+	}
+
+}
+
+@media (max-width: 960px) {
+
+	.dMember-info {
+		h1 {
+			font-size: 12px;
+		}
+	}
+
+}

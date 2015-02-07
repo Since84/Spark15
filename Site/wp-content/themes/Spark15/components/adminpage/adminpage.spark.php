@@ -59,7 +59,7 @@
 				,$this->options['menu_slug'] 
 			);
 
-			$fields = [
+			$fields = array(
 				array(
 	            	'name'	=> 'Heading'
 	            	,'id'	=> 'footer_heading'
@@ -100,7 +100,7 @@
 					,'name'	=> 'Contact Email'
 					,'section'	=> 'social_content'
 				)
-			];
+			);
 
 			foreach( $fields as $field )
 			{

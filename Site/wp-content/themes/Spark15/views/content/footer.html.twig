@@ -1,0 +1,17 @@
+<section class="footer-heading">
+	<h2>{{ header.heading }}</h2>
+	<h4>{{ header.sub_heading }}</h4>
+</section>
+<ul class="footer-content">
+	<li class="twitter">{{ twitter }}</li>
+<li class="petition">{{ petition }}</li>
+<li>{{ newsletter }}</li>
+</ul>
+<section class="footer-contact">
+	{{ contact_menu }}
+	{{ social_menu }}
+</section>
+<section class="footer-bottom">
+	<span class="copyright">&copy; {{site.name }} </span>
+	<span class="designed by">{% include '/views/plugs/elefint.html.twig' %}</span>
+</section>

@@ -31,6 +31,7 @@
     "require": {
         "fancyguy/webroot-installer": "1.0.0",
         "wordpress/core": "4.0",
+        "wpackagist-plugin/json-api": "1.1.*",
         "wpackagist-plugin/timber-library": "0.20.*",
         "wpackagist-plugin/seo-ultimate": "7.6.5.*",
         "wpackagist-plugin/w3-total-cache": "0.9.*",

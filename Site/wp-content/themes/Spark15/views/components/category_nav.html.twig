@@ -1,0 +1,9 @@
+<nav class="spark-region {{ spark_class }}">
+	<ul>
+        {% for item in nav %}
+            {# {{ dump(item) }} #}
+                <li class="nav-main-item {{item.classes | join(' ')}}"><a class="nav-main-link" href="{{item.get_link}}">{{item.name}}</a>
+                </li>
+        {% endfor %}
+	</ul>
+</nav>

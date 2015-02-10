@@ -21,16 +21,18 @@
 	<script>(function(){document.documentElement.className='js'})();</script>
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> >
+<body <?php body_class('rights_app'); ?> >
 
 <?php
 
-	//Get Site Header : uses SparkHeader Class
-	$sparkHeader 	= new Header_Header(array(
-	  'showLogo'      =>  true
-	  ,'headerRight'  =>  'sidebars/social.php' //Template for right side ( /views/components/... )
-	  ,'nav'          =>  'main-nav' //Menu name for nav menu
-	  ,'template'     =>  'header' //Name of header template
-	  ,'isJs'         =>  false
-	));	
-	echo $sparkHeader::getView();
+	$context['nav'] = new TimberMenu('main-nav');
+	$context['action'] = array(
+							'template' 	=> Timber::compile('/views/components/social.html.twig')
+							,'twitter' 	=> get_option('twitter_link')
+							,'facebook'	=> get_option('facebook_link')
+							,'donate'	=> esc_url( get_permalink( get_page_by_title( 'Donate' ) ) )
+						);
+
+	Timber::render('/views/components/header.html.twig', $context);
+
+

@@ -5,7 +5,7 @@
 
 	/// Contact Area
 	$sitemapContext = array( 'nav' => new TimberMenu('Main Nav') );
-	$footerContext['contact_menu'] = Timber::compile('views/components/nav.html.twig', $sitemapContext);
+	$footerContext['main_nav'] = Timber::compile('views/components/nav.html.twig', $sitemapContext);
 
 	$footerContext['social_menu'] = Timber::get_widgets('social_links');
 

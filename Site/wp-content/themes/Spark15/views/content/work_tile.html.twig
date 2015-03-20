@@ -1,13 +1,16 @@
 <div class='flip-card project-tile dCard'>	
-    <div class='front' style="background-image: url({{ tile.get_thumbnail.get_src }});">
-    	
-    </div>
-    <div class='back' style="background-image: url({{ tile.get_thumbnail.get_src }});">
-    	<div class='dMember-info'>
-	    	<h2>
-	    		{{ tile.post_excerpt }}
-	    	</h2>
-	    	<p>{{ tile.post_title }}</p>
-	    </div>
-    </div>					
+    {# <div class='front' style="background-image: url({{ tile.get_thumbnail.get_src('small') }});"> #}
+    <a href="{{ work_page.permalink }}?p={{ tile.ID }}">
+        <div class='front' style="background-image: url('http://lorempixel.com/100/100');">
+        </div>
+        {# <div class='back' style="background-image: url({{ tile.get_thumbnail.get_src('small') }});"> #}
+        <div class='back' style="background-image: url('http://lorempixel.com/100/100');">
+        	<div class='dMember-info'>
+    	    	<h2>
+    	    		{{ tile.post_excerpt }}
+    	    	</h2>
+    	    	<p>{{ tile.post_title }}</p>
+    	    </div>
+        </div>	
+    </a>				
 </div>

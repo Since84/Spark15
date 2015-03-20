@@ -44,7 +44,6 @@
 			$(window).resize(function(){
 				self.resizeGallery();
 				waitForFinalEvent(function(){
-					console.log("RESIZE");
 					self.resizeContainer();
 				}, 500, "sliderReposition" );
 			})
@@ -56,7 +55,7 @@
 		},
 		resizeGallery: function(){
 			var self = this;
-			var gallery = $(self.element).find('.dGallery');
+			var gallery = $(self.element).find('.spark-gallery');
 
 			gallery.each(function() {
         		var newHeight = 0, 

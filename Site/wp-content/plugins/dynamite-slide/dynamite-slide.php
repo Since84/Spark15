@@ -11,7 +11,7 @@
 	function dynamite_enqueue_scripts(){
 	// Scripts
 		wp_enqueue_script( 'jquery_widget', plugins_url( 'js/jquery-ui-1.10.4.custom.min.js', __FILE__ ), array('jquery') );
-		wp_enqueue_script( 'imagesloaded', plugins_url( 'js/imagesloaded-master/imagesloaded.pkgd.min.js', __FILE__ ), array('jquery'));
+		wp_enqueue_script( 'imagesloaded', plugins_url( 'js/imagesloaded-master/imagesloaded.pkgd.js', __FILE__ ), array('jquery'));
 		wp_enqueue_script( 'dynamite_slide_widget', plugins_url( 'js/dynamite-slide.js', __FILE__ ), array('jquery', 'jquery_widget', 'imagesloaded'));
 	
 	// Styles

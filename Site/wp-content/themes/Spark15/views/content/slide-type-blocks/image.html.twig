@@ -1,7 +1,4 @@
-<li class='slide'>
+<li class='slide image'>
 	{% if slide_link %} <a href="{{ slide_link }}"> {% endif %}
-		{{dump(slide)}}
+		<img src="{{ slide.thumbnail.get_url }}"/>
 	{% if slide_link %} </a> {% endif %}
-
-	
-</li>

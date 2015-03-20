@@ -1,0 +1,27 @@
+/* Responsive Styles */
+@import "agd";
+
+
+/* Responsive 1 */
+@media (max-width: 1087px) {
+	.container{
+		width: auto;
+		padding: 0 4%;
+	}
+}
+
+@media (max-width: 1005px) {
+
+	.main-content .testimonial .client-quote {
+		width: 68%;
+	}
+
+}
+
+@media (max-width: 720px) {
+
+	body {
+		min-width: 1080px;
+	}
+
+}

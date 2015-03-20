@@ -1,11 +1,17 @@
-<section class="spark-gallery {{ spark_class }}">
+<section class="spark-gallery cycle-slideshow {{ spark_class }}"
+		 data-cycle-timeout="0"
+		 data-cycle-fx="scrollHorz"
+		 data-cycle-slides=" > .slides .slide"
+		 data-cycle-next=".next"
+		 data-cycle-prev=".prev"
+>
 	<ul class="slides">
 	{% for slide in feed %} 
 		{% include slide_template %}
 	{% endfor %}
 	</ul>
-	<ul class="pager">
-		<li class="prev"></li>
-		<li class="next"></li>
+	<ul class="">
+		<li class="prev"><</li>
+		<li class="next">></li>
 	</ul>
 </section>

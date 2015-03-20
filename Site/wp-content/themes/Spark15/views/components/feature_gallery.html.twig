@@ -1,0 +1,11 @@
+<section class="spark-gallery feature-slider {{ spark_class }}">
+	<button class="prev paging"></button>
+	<div class="slide-window">
+		<ul class="slide-container">
+		{% for slide in feed %} 
+			{% include slide_template %}
+		{% endfor %}
+		</ul>
+	</div>
+	<button class="next paging"></button>
+</section>
